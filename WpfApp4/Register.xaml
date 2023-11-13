@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp4.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Регистрация пользователя" Height="450" Width="450">
+    <Grid>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <Label Content="Логин" HorizontalContentAlignment="Right"/>
+                <Label Content="Пароль" HorizontalContentAlignment="Right"/>
+                <Label Content="Подтверждение пароля" HorizontalContentAlignment="Right"/>
+                <Label Content="Фамилия" HorizontalContentAlignment="Right"/>
+                <Label Content="Имя" HorizontalContentAlignment="Right"/>
+                <Label Content="Отчество" HorizontalContentAlignment="Right"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBox Width="310" Height="27" VerticalContentAlignment="Center" x:Name="Login"/>
+                    <PasswordBox Width="310" Height="27" VerticalContentAlignment="Center" x:Name="Password"/>
+                    <PasswordBox Width="310" Height="27" VerticalContentAlignment="Center" x:Name="DopPassword"/>
+                    <TextBox Width="310" Height="27" VerticalContentAlignment="Center" x:Name="FirstName"/>
+                    <TextBox Width="310" Height="27" VerticalContentAlignment="Center" x:Name="Name"/>
+                    <TextBox Width="310" Height="27" VerticalContentAlignment="Center" x:Name="SurName"/>
+            </StackPanel>
+        </StackPanel>
+            <Button Content="Регистрация"  Width="150" Click="Registraciya"/>
+            <Button Content="Отменить"  Width="150" Click="Otmena"/>
+    </StackPanel>
+    </Grid>
+</Window>
