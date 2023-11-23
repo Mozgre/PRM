@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp4.Jurnal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Журнал" Height="450" Width="800" Loaded ="Window_Loaded" 
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Width="180" HorizontalAlignment="Left">
+                <Label Content="Группа:"/>
+                <ComboBox x:Name="GroupComboBox" Width="120" SelectionChanged="GroupComboBox_SelectionChanged" Text="{Binding Group}" Height="24">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Year}"/>
+                                <TextBlock Text="-"/>
+                                <TextBlock Text="{Binding SubGroup}"/>
+                                <TextBlock Text="{Binding Litire}"/>
+                                <TextBlock Text="{Binding CountClass}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="180">
+                <Label Content="Учебный год:" Width="85"/>
+                <ComboBox x:Name="AcademicYearBox" SelectionChanged="AcademicYearBox_SelectionChanged" Height="24" Width="90">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock> 
+                                    <Run Text="{Binding StartYear}"/> 
+                                    <Run Text="-"/> 
+                                    <Run Text="{Binding EndYear}"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel/>
+            <DataGrid Width="400" AutoGenerateColumns="False" x:Name="peoplegroup" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding People.SurName}" Header="Фамилия" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding People.Name}" Header="Имя" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding People.SecondName}" Header="Отчество" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
+
