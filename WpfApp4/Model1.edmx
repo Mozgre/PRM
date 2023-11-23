@@ -218,7 +218,7 @@
           <NavigationProperty Name="People" Relationship="Model.FK_People_User" FromRole="User" ToRole="People" />
         </EntityType>
         <Association Name="FK_Student_Group">
-          <End Role="Group" Type="Self.Group" Multiplicity="1" />
+          <End Role="Group" Type="Model.Group" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Group">
@@ -234,7 +234,7 @@
           <End Role="User" Type="Self.User" Multiplicity="*" />
         </Association>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Group" EntityType="Self.Group" />
+          <EntitySet Name="Group" EntityType="Model.Group" />
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="Student" EntityType="Self.Student" />
           <EntitySet Name="Teacher" EntityType="Self.Teacher" />

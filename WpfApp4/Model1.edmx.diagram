@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4724b20d6e3a497296c3613fe356fde3" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Group" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Group" Width="1.5" PointX="5.375" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Role" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Student" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Teacher" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
